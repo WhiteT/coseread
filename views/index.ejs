@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+<% include head.ejs %>
+<style type="text/css">
+
+</style>
+</head>
+
+<script type="text/javascript">
+$(document).ready(function() {
+var flag = true;
+$('.collapse').collapse();
+$('.dropdown-toggle').dropdown();
+$("#start").click(function() {
+  if (flag) {
+    $("#text").text("wtf");
+  } else {
+    $("#text").text("nonono");
+  }
+});
+
+  
+})
+
+</script>
+
+<body>
+<%= include navigator.ejs %>
+
+
+<div class="page-header container">
+  <h1>还没有名字
+    <small>人丑就要多看书</small>
+  </h1>
+</div>
+
+<div class="container">
+  <button id="register" type="button" class="btn btn-primary">注册</button>
+  <button id="login" type="button" class="btn btn-primary">登陆</button>
+</div>
+
+</body>
+
+</html>
