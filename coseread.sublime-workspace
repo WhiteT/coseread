@@ -315,7 +315,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 802,
+				"buffer_size": 850,
 				"line_ending": "Windows"
 			}
 		},
@@ -323,7 +323,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 91,
+				"buffer_size": 291,
 				"line_ending": "Windows"
 			}
 		},
@@ -331,23 +331,15 @@
 			"file": "/d/code/node/coseread/views/index.ejs",
 			"settings":
 			{
-				"buffer_size": 2994,
+				"buffer_size": 793,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/code/node/tasklist/package.json",
+			"file": "public/css/todc-bootstrap.css",
 			"settings":
 			{
-				"buffer_size": 370,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/bootstrap.js",
-			"settings":
-			{
-				"buffer_size": 60681,
+				"buffer_size": 118453,
 				"line_ending": "Unix"
 			}
 		},
@@ -358,21 +350,49 @@
 				"buffer_size": 132546,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "views/navigator.ejs",
+			"settings":
+			{
+				"buffer_size": 1861,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/preview.ejs",
+			"settings":
+			{
+				"buffer_size": 872,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 368,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"utf",
-				"ConvertToUTF8: Reload with Encoding"
-			],
-			[
 				"ssht",
 				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
 			],
 			[
 				"c++",
@@ -381,10 +401,6 @@
 			[
 				"js",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			],
 			[
 				"pre",
@@ -499,7 +515,7 @@
 				"Preferences: Terminal Settings – User"
 			]
 		],
-		"width": 576.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -520,17 +536,21 @@
 	},
 	"file_history":
 	[
+		"/D/code/node/coseread/public/css/bootstrap.css",
+		"/D/code/node/coseread/public/js/bootstrap.js",
+		"/C/Users/Giles/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/code/node/tasklist/package.json",
+		"/D/code/node/coseread/views/head.ejs",
+		"/C/Users/Giles/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Users/Giles/AppData/Roaming/Sublime Text 3/Packages/User/Terminal.sublime-settings",
 		"/D/code/node/test/node_modules/express/node_modules/method-override/index.js",
 		"/D/code/node/tasklist/node_modules/grunt/package.json",
 		"/D/code/java/andorid/TestSum/app/src/main/assets/js/jquery.mobile-1.4.3.js",
 		"/D/code/javascript/index.js",
 		"/D/code/java/andorid/MyApplication3/app/src/main/java/cn/seu/edu/MainActivity.java",
-		"/C/Users/Giles/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/D/code/node/coseread/public/css/bootstrap.css",
 		"/D/code/node/coseread/public/css/todc-bootstrap.css",
 		"/D/code/node/coseread/routes/index.js~",
 		"/D/code/node/coseread/package.json",
-		"/D/code/node/tasklist/package.json",
 		"/D/code/node/tasklist/settings.js",
 		"/D/code/node/tasklist/modules/db.js",
 		"/D/code/blog/index.html",
@@ -643,11 +663,7 @@
 		"/D/code/web/php/IppSignUp/controller/login.php",
 		"/D/code/web/php/testlogin/test.php",
 		"/D/documents/oo/SoftwareArchitecture/jsp.md",
-		"/D/documents/web/serverside/JSP/jspssl.md",
-		"/D/code/web/php/testlogin/index.html",
-		"/C/Users/Giles/Desktop/test.html",
-		"/C/Users/Giles/Desktop/test.php",
-		"/C/Users/Giles/Desktop/PetSurvey/WebRoot/index.jsp"
+		"/D/documents/web/serverside/JSP/jspssl.md"
 	],
 	"find":
 	{
@@ -665,6 +681,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bs-example-navbar-collapse-1",
+			"#bs-example-navbar-collapse-1",
+			"bs-example-navbar-collapse-1",
+			"checkbox",
+			"check",
+			"/\\*",
+			"checkbo",
+			"checkbox-inline input",
+			"checkbox-inline input[",
+			"checkbox",
+			"checkmark",
+			"主页",
+			"handle",
+			"start",
+			"title",
+			"exampleInputEmail2",
+			"exampleInputPassword2",
+			"register",
+			"resnext",
+			", ",
+			"login",
+			"连接",
+			"nonono",
 			"navbar-toggle",
 			"navigation",
 			"nini",
@@ -769,30 +808,7 @@
 			"email",
 			"Email",
 			"email",
-			"Email",
-			"email",
-			"inputPassword3",
-			"inputEmail3",
-			"6",
-			"10",
-			"static",
-			"STATIC_ROOT",
-			"TEMPLAT",
-			"h4",
-			";",
-			"<%=",
-			"include",
-			";",
-			"\\;",
-			"next",
-			"post",
-			"mongoservice",
-			"YourServiceName",
-			"a",
-			"button",
-			"a",
-			"zipcode",
-			"span"
+			"Email"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -834,7 +850,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -843,15 +859,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 802,
+						"buffer_size": 850,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								666,
-								666
+								458,
+								458
 							]
 						],
 						"settings":
@@ -860,10 +876,10 @@
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 166.0,
+						"translation.y": 256.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -872,79 +888,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 91,
+						"buffer_size": 291,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								87,
-								87
+								128,
+								128
 							]
 						],
 						"settings":
 						{
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/d/code/node/coseread/views/index.ejs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								222,
-								222
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/code/node/tasklist/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 370,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								337,
-								337
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -954,51 +912,49 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "public/js/bootstrap.js",
+					"buffer": 2,
+					"file": "/d/code/node/coseread/views/index.ejs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 60681,
+						"buffer_size": 793,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								169,
+								169
 							]
 						],
 						"settings":
 						{
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 88.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "public/css/bootstrap.css",
+					"buffer": 3,
+					"file": "public/css/todc-bootstrap.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 132546,
+						"buffer_size": 118453,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								17316,
+								17316
 							]
 						],
 						"settings":
@@ -1012,7 +968,131 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/css/bootstrap.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 132546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43616,
+								43616
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 53243.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/navigator.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								33,
+								33
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/preview.ejs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								733,
+								741
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 88.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

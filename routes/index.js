@@ -1,6 +1,11 @@
+var Book = require('../modules/book');
+
 exports.index = function(req, res) {
-  res.render('index.ejs', {
-    title: '人丑就要多看书'
+  Book.find(function(err, books) {
+    res.render('index.ejs', {
+      books: books,
+      title: '人丑就要多看书'
+    });
   });
 };
 
