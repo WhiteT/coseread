@@ -1,23 +1,77 @@
 var Book = require('../modules/book');
+var bodyParser = require('body-parser');
+var express = require('express');
+var app = express();
+app.use(bodyParser());
+var cookieParser = require('cookie-parser');
+app.use(cookieParser());
+var session = require('express-session');
+app.use(session({
+  secret: 'ipp',
+  cookie: { 
+    maxAge: 24*60*60*1000
+  }
+}));
 
 exports.index = function(req, res) {
-  Book.find(function(err, books) {
-    res.render('index.ejs', {
-      books: books,
-      title: '人丑就要多看书'
+  var sess = req.session
+  if (!sess.username) {
+    Book.find(function(err, books) {
+      
+      res.render('index.ejs', {
+        books: books,
+        title: '人丑就要多看书'
+      })
+    })
+  }
+  else {
+    res.render('admin.ejs', {
+      title: "admin",
+      username: sess.username
     });
-  });
+  }
 };
 
 exports.register = function(req, res) {
-  res.render('preview.ejs', {
-    progress: '注册'
-  });
+  var sess = req.session
+  if (!sess.username) {
+    res.render('preview.ejs', {
+      progress: '注册'
+    });    
+  }
+  else {
+    res.render('admin.ejs', {
+      title: "admin",
+      username: sess.username
+    })
+  }
 };
 
 exports.login = function(req, res) {
-  res.render('preview.ejs', {
-    progress: '登陆'
-  });
+  var sess = req.session
+  if (!sess.username) {
+    res.render('preview.ejs', {
+      progress: '登陆'
+    });
+  }
+  else {
+    res.render('admin.ejs', {
+      title: "admin",
+      username: sess.username
+    })
+  }
 };
 
+exports.checklogin = function(req, res) {
+  var uname = req.body.username,
+      upwd  = req.body.userpwd;
+  console.log("uname: " + uname);
+  console.log("upwd : " + upwd);
+  var sess = req.session
+  if (!sess.username) {
+    sess.username = uname;
+    sess.ip = req.ip;
+  }
+  res.json('success');
+  
+};
