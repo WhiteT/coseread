@@ -20,14 +20,16 @@ exports.index = function(req, res) {
       
       res.render('index.ejs', {
         books: books,
-        title: '人丑就要多看书'
+        title: '人丑就要多看书',
+        session: false
       })
     })
   }
   else {
     res.render('admin.ejs', {
       title: "admin",
-      username: sess.username
+      username: sess.username,
+      session: true
     });
   }
 };
@@ -36,13 +38,15 @@ exports.register = function(req, res) {
   var sess = req.session
   if (!sess.username) {
     res.render('preview.ejs', {
-      progress: '注册'
+      progress: '注册',
+      session: false
     });    
   }
   else {
     res.render('admin.ejs', {
       title: "admin",
-      username: sess.username
+      username: sess.username,
+      session: true
     })
   }
 };
@@ -51,13 +55,15 @@ exports.login = function(req, res) {
   var sess = req.session
   if (!sess.username) {
     res.render('preview.ejs', {
-      progress: '登陆'
+      progress: '登陆',
+      session: false
     });
   }
   else {
     res.render('admin.ejs', {
       title: "admin",
-      username: sess.username
+      username: sess.username,
+      session: true
     })
   }
 };
