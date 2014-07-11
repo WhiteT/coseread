@@ -3,22 +3,69 @@
 <head>
 <title><%= title %></title>
 <% include head.ejs %>
+
+<style type="text/css">
+.upload-file {
+  display: inline;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#select-file").click(function() {
+    $("#input-file").click()
+  })
+  $("#input-file").change(function() {
+    $("#file-path").val($(this).val())
+  })
+}) 
+</script>
 </head>
 <body>
 
 <% include navigator.ejs %>
 
-<div class="container"> 
-<h1>Administrator</h1>
-  
-</div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img data-src="holder.js/100%x180" alt="100%x180" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNzEiIGhlaWdodD0iMTgwIj48cmVjdCB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9Ijg1LjUiIHk9IjkwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MTcxeDE4MDwvdGV4dD48L3N2Zz4=" style="height: 180px; width: 100%; display: block;">
-    </a>
+<div class="container">
+  <div class="page-header">
+    <h2>添加新书 <small>信息填写</small></h2>
   </div>
+  
+    <div class="col-xs-6 col-md-4">
+      <div class="input-group">
+        <span class="input-group-addon">书名</span>
+        <input type="text" class="form-control" placeholder="必填">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">分类</span>
+        <input type="text" class="form-control" placeholder="必填">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon ">隶属</span>
+        <input type="text" class="form-control" placeholder="必填">
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="input-group-addon">作者</span>
+        <input type="text" class="form-control" placeholder="爱填不填">
+      </div>
+      <br>
+      
+      <div class="input-group">
+        <!-- <span class="input-group-addon"></span> -->
+        <input id="file-path" type="text" class="form-control" style="display:inline;" readonly="readonly">
+        <input id="input-file" type="file" class="upload-file" >
+        <span class="input-group-btn">
+          <button id="select-file" class="btn btn-primary" type="button">选择封面</button>
+        </span>
+      </div>
+      
+    </div>
+    
 </div>
-
 </body>
 </html>

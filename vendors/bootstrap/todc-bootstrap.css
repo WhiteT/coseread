@@ -3,9 +3,14 @@
  * Copyright 2011-2014 Tim O'Donnell
  * Licensed under MIT (http://www.opensource.org/licenses/mit-license.php)
  */
+
 * {
   font-family: Arial, Helvetica, "Microsoft YaHei";
 }
+.form-control[readonly] {
+  cursor: default;
+}
+/*cut-off line*/
 .panel-group .panel-heading a:before,
 .panel-group .panel-heading a.collapsed:before {
   position: relative;

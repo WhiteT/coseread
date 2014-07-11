@@ -6,9 +6,11 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
+// var flash = require('connect-flash');
 // var connect = require('connect');
 // var MongoStore = require('connect-mongo')(express);
 var app = express();
+// app.use(flash());
 app.use(bodyParser());
 app.use(cookieParser());
 app.use(session({
@@ -34,12 +36,25 @@ if ('development' == app.get('env')) {
   // app.use(express.errorHandler());
 }
 
+app.use(function(req, res, next) {
+  res.locals.username = req.session.username;
+
+  var err = req.flash('error');
+  var succ = req.flash('success');
+
+  res.locals.error = err.length ? err : null;
+  res.locals.success = succ.length ? succ : null;
+  next();
+});
+
+
 
 app.get('/', routes.index);
 app.get('/register', routes.register);
 app.get('/login', routes.login);
 
-app.post('/admin/login/', routes.checklogin);
+app.post('/register/check', routes.checkRegister);
+app.post('/login/check', routes.checkLogin);
 
 
 

@@ -22,13 +22,13 @@ Book.find = function(callback) {
         if (err) {
           return callback(err);
         }
+        mongodb.close();
         var books = [];
         docs.forEach(function(book, index) {
           var foundBook = new Book(book.name, book.genre, book.subj, book.author);
           books.push(foundBook);
         });
-        mongodb.close();
-        return callback(null, books);
+        callback(err, books);
       });
     });
   });

@@ -6,10 +6,12 @@
         <img src="img/<%=book.name%>.jpg" style="width:200px;height:300px;" data-src="holder.js/200x300" alt="...">
         <div class="caption" style="text-align:center;">
           <h3><%=book.name%></h3>
+          <h4>分类: <%=book.genre%> &nbsp; 作者: <%=book.author%></h4>
           <p>
             书目描述
           </p>
-          <p><a href="#" class="btn btn-primary" role="button"><%=book.genre%></a> <a href="#" class="btn btn-default" role="button"><%=book.author%></a></p>
+          <p><a href="#" class="btn btn-primary" role="button">查看详情</a>
+          <a href="#" class="btn btn-default" role="button">下载</a></p>
         </div>
       </div>
     </div>
