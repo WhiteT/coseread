@@ -39,11 +39,11 @@ if ('development' == app.get('env')) {
 app.use(function(req, res, next) {
   res.locals.username = req.session.username;
 
-  var err = req.flash('error');
-  var succ = req.flash('success');
+  // var err = req.flash('error');
+  // var succ = req.flash('success');
 
-  res.locals.error = err.length ? err : null;
-  res.locals.success = succ.length ? succ : null;
+  // res.locals.error = err.length ? err : null;
+  // res.locals.success = succ.length ? succ : null;
   next();
 });
 
