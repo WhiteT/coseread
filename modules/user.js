@@ -1,4 +1,5 @@
-var mongodb = require('./db');
+var mongodb = require('mongodb').Db;
+var settings = require('../settings');
 
 function User(user) {
   this.name = user.name;
@@ -18,14 +19,14 @@ User.prototype.register = function(callback) {
     pwd : this.pwd,
     type: 'user'
   };
-  mongodb.open(function(err, db) {
+  mongodb.connect(settings.url, function(err, db) {
     if (err) {
-      mongodb.close()
+      db.close()
       return callback(err);
     }
     db.collection("users", function(err, collection) {
       if (err) {
-        mongodb.close();
+        db.close();
         return callback(err);
       }
       collection.ensureIndex("name", {unique: true}, function(err) {
@@ -33,7 +34,7 @@ User.prototype.register = function(callback) {
       });
       
       collection.save(user, {safe:true}, function(err, user) {
-        mongodb.close();
+        db.close();
         callback(err, user);
       });
     });

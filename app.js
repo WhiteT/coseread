@@ -6,6 +6,7 @@ var routes = require('./routes');
 var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
+var settings = require('settings');
 // var flash = require('connect-flash');
 // var connect = require('connect');
 // var MongoStore = require('connect-mongo')(express);
@@ -14,10 +15,11 @@ var app = express();
 app.use(bodyParser());
 app.use(cookieParser());
 app.use(session({
-  secret: 'ipp',
+  secret: settings.cookieSecret,
   cookie: { 
     maxAge: 24*60*60*1000
-  }
+  },
+  url: settings.url
 }));
 
 // all environments

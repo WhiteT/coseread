@@ -1,4 +1,6 @@
-var mongodb = require('./db');
+var mongodb = require('mongodb').Db;
+var settings = require('../settings');
+
 
 function Book(_name, _genre, _subjection, _author) {
   this.name = _name;
@@ -8,21 +10,21 @@ function Book(_name, _genre, _subjection, _author) {
 };
 
 Book.find = function(callback) {
-  mongodb.open(function (err, db) {
+  mongodb.connect(settings.url, function (err, db) {
     if (err) {
-      mongodb.close();
+      db.close();
       return callback(err);
     }
     db.collection("books", function(err, collection) {
       if (err) {
-        mongodb.close();
+        db.close();
         return callback(err);
       }
       collection.find().toArray(function(err, docs) {
         if (err) {
           return callback(err);
         }
-        mongodb.close();
+        db.close();
         var books = [];
         docs.forEach(function(book, index) {
           var foundBook = new Book(book.name, book.genre, book.subj, book.author);
