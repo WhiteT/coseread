@@ -58,22 +58,30 @@ $(document).ready(function() {
         }),
         dataType: "json",
         success: function(data, textStatus) {
-          // alert(data);
-          if (data == 'success') {
+          if (data == 'l0') {
             location.assign('/');
           }
           else {
             var msg;
             switch (data) {
-              case '0':
+              case 'l1':
+              case 'l2':
+                msg = '你登陆的不对';
+                $('#msg').addClass('alert-danger');
+                break;
+              case 'l3':
+                msg = '名字和密码是编的吧?';
+                $('#msg').addClass('alert-danger');
+                break;
+              case 'r1':
                 msg = '用户名已经存在';
                 $('#msg').addClass('alert-danger');
                 break;
-              case '1':
+              case 'r2':
                 msg = '绝逼是你出了什么问题';
                 $('#msg').addClass('alert-danger');
                 break;
-              case '2':
+              case 'r3':
                 msg = '注册成功啦';
                 $('#msg').addClass('alert-success');
                 break;

@@ -1,4 +1,5 @@
 var mongodb = require('mongodb').Db;
+// var mongodb = require('./db.js')
 var settings = require('../settings');
 
 function User(user) {
@@ -42,20 +43,20 @@ User.prototype.register = function(callback) {
 };
 
 User.get = function(username, callback) {
-  mongodb.open(function(err, db) {
+  mongodb.connect(settings.url, function(err, db) {
     if (err) {
-      mongodb.close();
+      db.close();
       return callback(err);
     }
     db.collection("users", function(err, collection) {
       if (err) {
-        mongodb.close();
+        db.close();
         return callback(err);
       }
       collection.findOne({name: username}, function(err, doc) {
-        mongodb.close();
+        db.close();
         var user = User(doc);
-        callback(err, doc);
+        return callback(err, user);
       });
     });
   });

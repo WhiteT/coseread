@@ -1,5 +1,7 @@
 var Book = require('../modules/book');
 var User = require('../modules/user');
+var url = require('url')
+var queryString = require('querystring')
 
 exports.index = function(req, res) {
   var sess = req.session
@@ -7,7 +9,7 @@ exports.index = function(req, res) {
     Book.find(function(err, books) {      
       res.render('index.ejs', {
         books: books,
-        title: '人丑就要多看书',
+        title: '软院子',
         session: sess
       })
     })
@@ -55,15 +57,27 @@ exports.login = function(req, res) {
 exports.checkLogin = function(req, res) {
   var uname = req.body.username,
       upwd  = req.body.userpwd;
-  // console.log("uname: " + uname);
-  // console.log("upwd : " + upwd);
-
-  var sess = req.session;
-  if (!sess.username) {
-    sess.username = uname;
-    sess.ip = req.ip;
+  console.log('uname ' + uname)
+  console.log('upwd  ' + upwd)
+  if (uname==undefined || upwd==undefined || uname==null || upwd==null) {
+     return res.json('l1')
   }
-  res.json('success');
+  if (uname.length<4 || upwd.length<4) {
+    return res.json('l2')
+  }
+
+  User.get(uname, function(err, user) {
+    if (err) {
+      return res.json('l3')
+    }
+    var sess = req.session;
+    if (!sess.username) {
+      sess.username = uname;
+      sess.ip = req.ip;
+    }
+    
+    return res.json('l0');
+  })
   
 };
 
@@ -84,29 +98,21 @@ exports.checkRegister = function(req, res) {
     req.body.userpwd
   );
   if (!valideLength(newUser.name) && !valideLength(newUser.pwd)) {
-    return res.json('1');
+    return res.json('r1');
   }
   if (!isalpnum(newUser.name) && !isalpnum(newUser.pwd)) {
-    return res.json('1');
+    return res.json('r1');
   }
   User.get(newUser.name, function(err, user) {
-    if (user)
-      err = '用户已经存在'; // have already existed
     if (err) {
-      // console.log(err);
-      // req.flash('error', err);
-      return res.json('0');
+      return res.json('r1');
     }
     newUser.register(function(err) {
       if (err) {
-        // req.flash('error', err);
-        // return res.redirect('/register');
-        return res.json('1');
+        return res.json('r2');
       }
       req.session.username = newUser.name;
-      // req.flash('success', '注册成功啦'); // success code
-      // return req.redirect('/');
-      return res.json('2');
+      return res.json('r3');
     });
   });
 };
